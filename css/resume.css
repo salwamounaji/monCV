@@ -1,0 +1,33 @@
+html, button, input, select, textarea{
+ color: #444;
+}
+
+html { font-size: 1em; 
+       line-height: 1.4; 
+       background-color: rgb(64,32,32);}
+
+#wrapper{
+      max-width: 900px;
+      min-width: 320px;
+      margin-left: 400px;
+      margin-right: 400px;
+}
+
+#divimg {
+     display : inline-block;
+}
+
+#divimg img {
+     width:200px; 
+     background-color: rgba(0,0,0, 0.2);
+     border-width: 1px;
+     border-color: #ccc;
+     border-radius: 3px;
+     
+}
+
+#coordonnees {
+    display : inline-block;
+    text-align: center;
+    width: 950px; 
+}
