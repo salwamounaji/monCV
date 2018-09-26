@@ -76,6 +76,6 @@ html { font-size: 1em;
 #coordonnees {
     display : inline-block;
     text-align: center;
-    width: 950px; 
+    width: 100%; 
 }
 
