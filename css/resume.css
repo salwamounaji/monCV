@@ -15,8 +15,31 @@ h1{
        }
 
 article{
-  color: black;
-}
+  color: black;}
+
+#article1:before {
+           content:url(../icons/formation.png);
+ }
+
+#article2:before {
+            content:url(../icons/experience.png);
+ }
+
+#article3:before {
+            content:url(../icons/competence.png);
+ }
+
+#article4:before {
+            content:url(../icons/langue.png);
+ }
+
+#article5:before {
+            content:url(../icons/hobbie.png);
+ }
+
+
+
+
 hr{
     width:700px;
 }
