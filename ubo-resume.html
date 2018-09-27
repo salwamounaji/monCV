@@ -5,9 +5,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title> Mon CV </title>
 <meta name="description" content="Etudiante à l'UBO en Master2 DOSI">
-<style>
-  
-</style>
+<script>
+
+ function masquer_div(id)
+{
+  if (document.getElementById(id).style.display == 'none') {
+       document.getElementById(id).style.display = 'block';
+  }
+  else {
+       document.getElementById(id).style.display = 'none';
+  }
+}
+
+</script>
 <link rel="stylesheet" href="css/resume.css" />
 <link rel="stylesheet" href="css/responsive.css" />
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/fontawesome.min.css">
@@ -42,7 +52,8 @@
      <section>
           </br></br>
 
-          <article id="article1" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Formation</b></i></article>
+          <article id="article1" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Formation</b></i></article><input type="button" value="Détails" onclick="masquer_div('masquer');" />
+             <div id="masquer" style="display: none;">
                <dl style="margin-left: 40px;">
                     <dt>2018-2019: Université de Bretagne Occidentale</dt>
                        <dd class="listeformation">Master 2</dd>
@@ -68,8 +79,10 @@
                        <dd class="listeformation">Baccalauréat</dd>
                        <dd class="listeformation">Science Physique , Mention Bien.</dd>
                </dl>
+           </div>
 
-          <article id="article2" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Parcours Professionnel</b></i></article>
+          <article id="article2" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Parcours Professionnel</b></i></article><input type="button" value="Détails" onclick="masquer_div('masquerexp');" />
+          <div id="masquerexp" style="display: none;">
               <dl style="margin-left: 40px;">
                     <dt>Juin-Juillet: STAGIAIRE</dt>
                        <dd style="display: inline;" >2018</dd><dd class="listeexperience" style="display: inline;">La Direction Provinciale de l’Agriculture-Settat</dd>
@@ -86,10 +99,11 @@ Nous avons utilisé les solutions Nagios , Centreon et Nagvis.</dd>
                        <dd style="display: inline;">2015</dd><dd class="listeexperience" style="display: inline;">Régie autonome intercommunale de distribution d’eau et d’électricité de la chaouia-Settat</dd>
                        <dd class="listeformation">Stage d'observation dont le but était de découvrir le milieu professionnel.</dd>
                </dl>
+         </div>
      </section>
      <section>
-         <article id="article3" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Compétences</b></i></article>
-                <div style="margin-left: 10px;">
+         <article id="article3" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Compétences</b></i></article><input type="button" value="Détails" onclick="masquer_div('masquercomp');" />
+                <div style="margin-left: 10px; display: none;" id="masquercomp">
                     <ul>
                          <li>UML</li>
                          <li>Gestion de projet</li>
@@ -108,16 +122,16 @@ Nous avons utilisé les solutions Nagios , Centreon et Nagvis.</dd>
                     </ul>
                 </div>
 
-         <article id="article4" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Langues </b></i></article>
-             <div style="margin-left: 30px;">
-                  <p> Arabe : Langue maternelle </p>
-                  <p> Français : C1 </p>
-                  <p> Anglais: Intermédiaire </p>
-                  <p> Portugais: Notions de base </p>
+         <article id="article4" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Langues </b></i></article><input type="button" value="Détails" onclick="myFunction();" />
+             <div style="margin-left: 30px;" id="masquerlang">
+                  <p style="display: none;"> Arabe : Langue maternelle </p>
+                  <p style="display: none;"> Français : C1 </p>
+                  <p style="display: none;"> Anglais: Intermédiaire </p>
+                  <p style="display: none;"> Portugais: Notions de base </p>
             </div>
                   
-         <article id="article5" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Hobbies </b></i></article>
-             <div style="margin-left: 10px;">
+         <article id="article5" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Hobbies </b></i></article><input type="button" value="Détails" onclick="masquer_div('masquerhob');" />
+             <div style="margin-left: 10px; display: none;" id="masquerhob">
                     <ul>
                          <li>Lecture</li>
                          <li>Voyage</li>
