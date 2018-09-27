@@ -5,19 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title> Mon CV </title>
 <meta name="description" content="Etudiante à l'UBO en Master2 DOSI">
-<script>
-
- function masquer_div(id)
-{
-  if (document.getElementById(id).style.display == 'none') {
-       document.getElementById(id).style.display = 'block';
-  }
-  else {
-       document.getElementById(id).style.display = 'none';
-  }
-}
-
-</script>
+<script src="js/details.js">  </script>
 <link rel="stylesheet" href="css/resume.css" />
 <link rel="stylesheet" href="css/responsive.css" />
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/fontawesome.min.css">
@@ -52,36 +40,31 @@
      <section>
           </br></br>
 
-          <article id="article1" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Formation</b></i></article><input type="button" value="Détails" onclick="masquer_div('masquer');" />
-             <div id="masquer" style="display: none;">
+          <article id="article1" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Formation</b></i></article>
+             <div id="masquer">
                <dl style="margin-left: 40px;">
-                    <dt>2018-2019: Université de Bretagne Occidentale</dt>
-                       <dd class="listeformation">Master 2</dd>
-                       <dd class="listeformation"> Développement lOgiciel des Systèmes d’Information.</dd>
+                    <dt>2018-2019: Université de Bretagne Occidentale-Master 2</dt><button onclick="showDetails(0)"> Détails </button>
+                       <dd class="p1" id="0" style="display:none;"> Développement lOgiciel des Systèmes d’Information.</dd>
                </dl>
                <dl style="margin-left: 40px;">
-                    <dt>2017-2019: Faculté des Sciences et Techniques de settat- Université Hassan 1 er</dt>
-                       <dd class="listeformation">Master sciences et techniques</dd>
-                       <dd class="listeformation"> Réseaux et systèmes informatiques.</dd>
+                    <dt>2017-2019: Faculté des Sciences et Techniques de settat- Université Hassan 1 er-Master sciences et techniques-Master sciences et techniques</dt><button onclick="showDetails(1)"> Détails </button>
+                       <dd class="p1" id="1" style="display:none;"> Réseaux et systèmes informatiques.</dd>
                </dl>
                <dl style="margin-left: 40px;">
-                    <dt>2016-2017: Faculté des Sciences et Techniques de settat- Université Hassan 1 er</dt>
-                       <dd class="listeformation">Licence sciences et techniques</dd>
-                       <dd class="listeformation">Génie Informatique , Mention Bien.</dd>
+                    <dt>2016-2017: Faculté des Sciences et Techniques de settat- Université Hassan 1 er-Licence sciences et techniques</dt><button onclick="showDetails(2)"> Détails </button>
+                       <dd class="p1" id="2"  style="display:none;">Génie Informatique , Mention Bien.</dd>
                </dl>
                <dl style="margin-left: 40px;">
-                    <dt>2012-2015: Faculté des Sciences et Techniques de settat- Université Hassan 1 er</dt>
-                       <dd class="listeformation">DEUST</dd>
-                       <dd class="listeformation">Mathématiques Informatique Physique, Mention Passable.</dd>
+                    <dt>2012-2015: Faculté des Sciences et Techniques de settat- Université Hassan 1 er-DEUST</dt><button onclick="showDetails(3)"> Détails </button>
+                       <dd class="p1" id="3"  style="display:none;" >Mathématiques Informatique Physique, Mention Passable.</dd>
                </dl>
                <dl style="margin-left: 40px;">
-                    <dt>2011-2012: Lycée ERRAZI</dt>
-                       <dd class="listeformation">Baccalauréat</dd>
-                       <dd class="listeformation">Science Physique , Mention Bien.</dd>
+                    <dt>2011-2012: Lycée ERRAZI-Baccalauréat</dt><button onclick="showDetails(4)"> Détails </button>
+                       <dd class="p1" id="4"  style="display:none;">Science Physique , Mention Bien.</dd>
                </dl>
            </div>
 
-          <article id="article2" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Parcours Professionnel</b></i></article><input type="button" value="Détails" onclick="masquer_div('masquerexp');" />
+          <article id="article2" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Parcours Professionnel</b></i></article><input type="button" value="+" onclick="masquer_div('masquerexp');" />
           <div id="masquerexp" style="display: none;">
               <dl style="margin-left: 40px;">
                     <dt>Juin-Juillet: STAGIAIRE</dt>
@@ -102,7 +85,7 @@ Nous avons utilisé les solutions Nagios , Centreon et Nagvis.</dd>
          </div>
      </section>
      <section>
-         <article id="article3" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Compétences</b></i></article><input type="button" value="Détails" onclick="masquer_div('masquercomp');" />
+         <article id="article3" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Compétences</b></i></article><input type="button" value="+" onclick="masquer_div('masquercomp');" />
                 <div style="margin-left: 10px; display: none;" id="masquercomp">
                     <ul>
                          <li>UML</li>
@@ -122,15 +105,15 @@ Nous avons utilisé les solutions Nagios , Centreon et Nagvis.</dd>
                     </ul>
                 </div>
 
-         <article id="article4" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Langues </b></i></article><input type="button" value="Détails" onclick="myFunction();" />
-             <div style="margin-left: 30px;" id="masquerlang">
-                  <p style="display: none;"> Arabe : Langue maternelle </p>
-                  <p style="display: none;"> Français : C1 </p>
-                  <p style="display: none;"> Anglais: Intermédiaire </p>
-                  <p style="display: none;"> Portugais: Notions de base </p>
+         <article id="article4" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Langues </b></i></article><input type="button" value="+" onclick="masquer_div('masquerlang');" />
+             <div style="margin-left: 30px; display: none;" id="masquerlang">
+                  <p> Arabe : Langue maternelle </p>
+                  <p> Français : C1 </p>
+                  <p> Anglais: Intermédiaire </p>
+                  <p> Portugais: Notions de base </p>
             </div>
                   
-         <article id="article5" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Hobbies </b></i></article><input type="button" value="Détails" onclick="masquer_div('masquerhob');" />
+         <article id="article5" style="text-decoration: underline;"><i class="icon-camera-retro"><b>Hobbies </b></i></article><input type="button" value="+" onclick="masquer_div('masquerhob');" />
              <div style="margin-left: 10px; display: none;" id="masquerhob">
                     <ul>
                          <li>Lecture</li>
