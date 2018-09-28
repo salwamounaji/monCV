@@ -11,7 +11,8 @@ function showDetails(x){
 
 		if(divid.style.display == 'none'){
 		divid.classList.add("visible");
-		divid.style.display='inline';}
+		divid.style.display='inline';
+}
 		else{
 
 		divid.style.display='none';
@@ -28,4 +29,15 @@ if( document.getElementById(id).style.display == "none"){
 else{
      document.getElementById(id).style.display = "none";
     }
+}
+
+var z = 0;
+
+function progressif(){
+	var mydiv = document.getElementsByClassName('ajoutcom')[0];
+	if(mydiv.style.height != '150px'){
+		mydiv.style.height = z + 'px';     
+		z += 10;
+		setTimeout('progressif()', 30);
+	}
 }
