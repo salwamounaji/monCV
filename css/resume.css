@@ -14,6 +14,15 @@ h1{
        font-family: aclonica, sans-serif;
        }
 
+.eval {
+  margin-left: 10px;
+  color: rgb(128,0,64);
+}
+
+#devweb {
+    margin:0 auto;
+    text-align: center;
+}
 article{
   color: black;}
 

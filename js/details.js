@@ -59,5 +59,24 @@ function SizeProgress(x) {
 	setTimeout(() => { clearInterval(timerId);}, 1000);
 }
 
+var levels = {
+  PHP : 4,
+  JS :2,
+  JAVAEE :4,
+     HTML :5,
+    CSS :5
+    
+};
+
+for (field in levels) {
+  var stars = document.getElementsByClassName(field).item(0);
+  var children = stars.children;
+  for (var i = 0; i < levels[field]; i++) {
+    var star = children.item(i);
+    star.className = "fa fa-star";
+  }
+}
+
+
 
 
